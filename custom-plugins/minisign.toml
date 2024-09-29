@@ -1,0 +1,20 @@
+name = "minisign"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/jedisct1/minisign"
+
+[platform.linux]
+archive-prefix = "minisign-{version}-linux"
+download-file = "minisign-{version}-linux.tar.gz"
+
+[platform.macos]
+archive-prefix = "minisign-{version}-macos"
+download-file = "minisign-{version}-macos.tar.gz"
+
+[platform.windows]
+archive-prefix = "minisign-{version}-win64"
+download-file = "minisign-{version}-win64.zip"
+
+[install]
+download-url = "https://github.com/jedisct1/minisign/releases/download/{version}/{download_file}"

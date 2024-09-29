@@ -1,0 +1,20 @@
+name = "jaq"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/01mf02/jaq"
+
+[platform.linux]
+download-file = "jaq-v{version}-{arch}-unknown-linux-{libc}"
+
+[platform.macos]
+download-file = "jaq-v{version}-{arch}-apple-darwin"
+
+[platform.windows]
+download-file = "jaq-v{version}-{arch}-pc-windows-msvc.exe"
+
+[install]
+download-url = "https://github.com/01mf02/jaq/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"

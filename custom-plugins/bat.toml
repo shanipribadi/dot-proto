@@ -1,0 +1,23 @@
+name = "bat"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/sharkdp/bat"
+
+[platform.linux]
+archive-prefix = "bat-v{version}-{arch}-unknown-linux-{libc}"
+download-file = "bat-v{version}-{arch}-unknown-linux-{libc}.tar.gz"
+
+[platform.macos]
+archive-prefix = "jaq-v{version}-{arch}-apple-darwin"
+download-file = "jaq-v{version}-{arch}-apple-darwin.tar.gz"
+
+[platform.windows]
+archive-prefix = "jaq-v{version}-{arch}-pc-windows-msvc"
+download-file = "jaq-v{version}-{arch}-pc-windows-msvc.zip"
+
+[install]
+download-url = "https://github.com/sharkdp/bat/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"

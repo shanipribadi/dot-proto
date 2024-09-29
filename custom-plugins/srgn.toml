@@ -1,0 +1,26 @@
+name = "srgn"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/alexpovel/srgn"
+
+[platform.linux]
+archive-prefix = "srgn"
+download-file = "srgn-{arch}-unknown-linux-{libc}.tgz"
+checksum-file = "srgn-{arch}-unknown-linux-{libc}.tgz.sha256"
+
+[platform.macos]
+archive-prefix = "srgn"
+download-file = "srgn-{arch}-apple-darwin.tgz"
+checksum-file = "srgn-{arch}-apple-darwin.tgz.sha256"
+
+[platform.windows]
+archive-prefix = "srgn"
+download-file = "srgn-{arch}-pc-windows-msvc.tgz"
+checksum-file = "srgn-{arch}-pc-windows-msvc.tgz.sha256"
+
+[install]
+download-url = "https://github.com/alexpovel/srgn/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"

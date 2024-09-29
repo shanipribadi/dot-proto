@@ -1,0 +1,27 @@
+name = "logu"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/ynqa/logu"
+
+[platform.linux]
+archive-prefix = "logu-{arch}-unknown-linux-{libc}"
+download-file = "logu-{arch}-unknown-linux-{libc}.tar.xz"
+checksum-file = "logu-{arch}-unknown-linux-{libc}.tar.xz.sha256"
+
+[platform.macos]
+archive-prefix = "logu-{arch}-apple-darwin"
+download-file = "logu-{arch}-apple-darwin.tar.xz"
+checksum-file = "logu-{arch}-apple-darwin.tar.xz.sha256"
+
+[platform.windows]
+archive-prefix = "logu-{arch}-pc-windows-msvc"
+download-file = "logu-{arch}-pc-windows-msvc.zip"
+checksum-file = "logu-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/ynqa/logu/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/ynqa/logu/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i686"

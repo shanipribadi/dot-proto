@@ -1,0 +1,27 @@
+name = "sig"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/ynqa/sig"
+
+[platform.linux]
+archive-prefix = "sigrs-{arch}-unknown-linux-{libc}"
+download-file = "sigrs-{arch}-unknown-linux-{libc}.tar.xz"
+checksum-file = "sigrs-{arch}-unknown-linux-{libc}.tar.xz.sha256"
+
+[platform.macos]
+archive-prefix = "sigrs-{arch}-apple-darwin"
+download-file = "sigrs-{arch}-apple-darwin.tar.xz"
+checksum-file = "sigrs-{arch}-apple-darwin.tar.xz.sha256"
+
+[platform.windows]
+archive-prefix = "sigrs-{arch}-pc-windows-msvc"
+download-file = "sigrs-{arch}-pc-windows-msvc.zip"
+checksum-file = "sigrs-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/ynqa/sig/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/ynqa/sig/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i686"

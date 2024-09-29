@@ -1,0 +1,20 @@
+name = "procs"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/dalance/procs"
+
+[platform.linux]
+download-file = "procs-v{version}-{arch}-linux.zip"
+
+[platform.macos]
+download-file = "procs-v{version}-{arch}-mac.zip"
+
+[platform.windows]
+download-file = "procs-v{version}-{arch}-windows.zip"
+
+[install]
+download-url = "https://github.com/dalance/procs/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
