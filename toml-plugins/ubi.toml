@@ -1,0 +1,29 @@
+name = "ubi"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/houseabsolute/ubi"
+
+[platform.linux]
+archive-prefix = "ubi-Linux-{arch}-{libc}"
+download-file = "ubi-Linux-{arch}-{libc}.tar.gz"
+checksum-file = "ubi-Linux-{arch}-{libc}.tar.gz.sha256"
+
+[platform.macos]
+archive-prefix = "ubi-Darwin-{arch}"
+download-file = "ubi-Darwin-{arch}.tar.gz"
+checksum-file = "ubi-Darwin-{arch}.tar.gz.sha256"
+
+[platform.windows]
+archive-prefix = "ubi-Windows-{arch}"
+download-file = "ubi-Windows-{arch}.zip"
+checksum-file = "ubi-Windows-{arch}.zip.sha256"
+
+[install]
+download-url = "https://github.com/houseabsolute/ubi/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
+
+[install.libc]
+gnu = "musl"
