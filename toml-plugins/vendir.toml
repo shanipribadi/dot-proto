@@ -1,0 +1,22 @@
+name = "vendir"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/carvel-dev/vendir"
+
+[platform.linux]
+download-file = "vendir-linux-{arch}"
+
+[platform.macos]
+download-file = "vendir-darwin-{arch}"
+
+[platform.windows]
+download-file = "vendir-windows-{arch}.exe"
+
+[install]
+download-url = "https://github.com/carvel-dev/vendir/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
+x86_64 = "amd64"
+aarch64 = "arm64"
