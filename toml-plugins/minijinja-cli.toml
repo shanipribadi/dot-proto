@@ -1,0 +1,27 @@
+name = "minijinja-cli"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/mitsuhiko/minijinja"
+
+[platform.linux]
+archive-prefix = "minijinja-cli-{arch}-unknown-linux-{libc}"
+download-file = "minijinja-cli-{arch}-unknown-linux-{libc}.tar.xz"
+checksum-file = "minijinja-cli-{arch}-unknown-linux-{libc}.tar.xz.sha256"
+
+[platform.macos]
+archive-prefix = "minijinja-cli-{arch}-apple-darwin"
+download-file = "minijinja-cli-{arch}-apple-darwin.tar.xz"
+checksum-file = "minijinja-cli-{arch}-apple-darwin.tar.xz.sha256"
+
+[platform.windows]
+archive-prefix = "minijinja-cli-{arch}-pc-windows-msvc"
+download-file = "minijinja-cli-{arch}-pc-windows-msvc.zip"
+checksum-file = "minijinja-cli-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/mitsuhiko/minijinja/releases/download/{version}/{download_file}"
+checksum-url = "https://github.com/mitsuhiko/minijinja/releases/download/{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i686"
