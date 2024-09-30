@@ -6,22 +6,25 @@ git-url = "https://github.com/{{repo}}"
 
 [platform.linux]
 archive-prefix = "{{name}}-{arch}-unknown-linux-{libc}"
-download-file = "{{name}}-{arch}-unknown-linux-{libc}.tar.xz"
-checksum-file = "{{name}}-{arch}-unknown-linux-{libc}.tar.xz.sha256"
+download-file = "{{name}}-{arch}-unknown-linux-{libc}.tar.gz"
+checksum-file = "{{name}}-{arch}-unknown-linux-{libc}.tar.gz.sha256"
 
 [platform.macos]
 archive-prefix = "{{name}}-{arch}-apple-darwin"
-download-file = "{{name}}-{arch}-apple-darwin.tar.xz"
-checksum-file = "{{name}}-{arch}-apple-darwin.tar.xz.sha256"
+download-file = "{{name}}-{arch}-apple-darwin.tar.gz"
+checksum-file = "{{name}}-{arch}-apple-darwin.tar.gz.sha256"
 
 [platform.windows]
 archive-prefix = "{{name}}-{arch}-pc-windows-msvc"
 download-file = "{{name}}-{arch}-pc-windows-msvc.zip"
 checksum-file = "{{name}}-{arch}-pc-windows-msvc.zip.sha256"
 
-[install]
+[install]{% if v_tagged_release %}
+download-url = "https://github.com/{{repo}}/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/{{repo}}/releases/download/v{version}/{checksum_file}"
+{% else %}
 download-url = "https://github.com/{{repo}}/releases/download/{version}/{download_file}"
 checksum-url = "https://github.com/{{repo}}/releases/download/{version}/{checksum_file}"
-
+{% endif %}
 [install.arch]
 x86 = "i686"
