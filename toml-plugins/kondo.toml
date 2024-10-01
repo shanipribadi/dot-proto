@@ -1,0 +1,28 @@
+name = "kondo"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/tbillington/kondo"
+# versions = ["0.8.0"]
+version-pattern = "^v?((?<major>\\d+)\\.(?<minor>\\d+)(\\.(?<patch>\\d+))?)"
+
+[platform.linux]
+archive-prefix = "kondo-{arch}-unknown-linux-{libc}"
+download-file = "kondo-{arch}-unknown-linux-{libc}.tar.gz"
+checksum-file = "kondo-{arch}-unknown-linux-{libc}.tar.gz.sha256"
+
+[platform.macos]
+archive-prefix = "kondo-{arch}-apple-darwin"
+download-file = "kondo-{arch}-apple-darwin.tar.gz"
+checksum-file = "kondo-{arch}-apple-darwin.tar.gz.sha256"
+
+[platform.windows]
+archive-prefix = "kondo-{arch}-pc-windows-msvc"
+download-file = "kondo-{arch}-pc-windows-msvc.zip"
+checksum-file = "kondo-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/tbillington/kondo/releases/download/v0.8/{download_file}"
+
+[install.arch]
+x86 = "i686"
