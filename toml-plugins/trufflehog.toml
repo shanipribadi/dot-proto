@@ -1,0 +1,28 @@
+name = "trufflehog"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/trufflesecurity/trufflehog"
+
+[platform.linux]
+archive-prefix = "trufflehog_{version}_linux_{arch}"
+download-file = "trufflehog_{version}_linux_{arch}.tar.gz"
+checksum-file = "trufflehog_{version}_linux_{arch}.tar.gz.sha256"
+
+[platform.macos]
+archive-prefix = "trufflehog_{version}_darwin_{arch}"
+download-file = "trufflehog_{version}_darwin_{arch}.tar.gz"
+checksum-file = "trufflehog_{version}_darwin_{arch}.tar.gz.sha256"
+
+[platform.windows]
+archive-prefix = "trufflehog_{version}_windows_{arch}"
+download-file = "trufflehog_{version}_windows_{arch}.tar.gz"
+checksum-file = "trufflehog_{version}_windows_{arch}.tar.gz.sha256"
+
+[install]
+download-url = "https://github.com/trufflesecurity/trufflehog/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
+x86_64 = "amd64"
+aarch64 = "arm64"
