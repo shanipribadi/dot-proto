@@ -1,0 +1,26 @@
+name = "polars"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/pola-rs/polars-cli"
+
+[platform.linux]
+archive-prefix = "polars-cli-{version}-{arch}-unknown-linux-{libc}"
+download-file = "polars-cli-{version}-{arch}-unknown-linux-{libc}.tar.gz"
+checksum-file = "polars-cli-{version}-{arch}-unknown-linux-{libc}.tar.gz.sha256"
+
+[platform.macos]
+archive-prefix = "polars-cli-{version}-{arch}-apple-darwin"
+download-file = "polars-cli-{version}-{arch}-apple-darwin.tar.gz"
+checksum-file = "polars-cli-{version}-{arch}-apple-darwin.tar.gz.sha256"
+
+[platform.windows]
+archive-prefix = "polars-cli-{version}-{arch}-pc-windows-msvc"
+download-file = "polars-cli-{version}-{arch}-pc-windows-msvc.zip"
+checksum-file = "polars-cli-{version}-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/pola-rs/polars-cli/releases/download/{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
