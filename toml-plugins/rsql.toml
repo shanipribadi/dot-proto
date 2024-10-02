@@ -1,0 +1,27 @@
+name = "rsql"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/theseus-rs/rsql"
+
+[platform.linux]
+archive-prefix = "rsql_cli-{arch}-unknown-linux-{libc}"
+download-file = "rsql_cli-{arch}-unknown-linux-{libc}.tar.xz"
+checksum-file = "rsql_cli-{arch}-unknown-linux-{libc}.tar.xz.sha256"
+
+[platform.macos]
+archive-prefix = "rsql_cli-{arch}-apple-darwin"
+download-file = "rsql_cli-{arch}-apple-darwin.tar.xz"
+checksum-file = "rsql_cli-{arch}-apple-darwin.tar.xzsha256"
+
+[platform.windows]
+archive-prefix = "rsql_cli-{arch}-pc-windows-msvc"
+download-file = "rsql_cli-{arch}-pc-windows-msvc.zip"
+checksum-file = "rsql_cli-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/theseus-rs/rsql/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/theseus-rs/rsql/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i686"

@@ -1,0 +1,27 @@
+name = "topiary"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/tweag/topiary"
+
+[platform.linux]
+archive-prefix = "topiary-cli-{arch}-unknown-linux-{libc}"
+download-file = "topiary-cli-{arch}-unknown-linux-{libc}.tar.xz"
+checksum-file = "topiary-cli-{arch}-unknown-linux-{libc}.tar.xz.sha256"
+
+[platform.macos]
+archive-prefix = "topiary-cli-{arch}-apple-darwin"
+download-file = "topiary-cli-{arch}-apple-darwin.tar.xz"
+checksum-file = "topiary-cli-{arch}-apple-darwin.tar.xz.sha256"
+
+[platform.windows]
+archive-prefix = "topiary-cli-{arch}-pc-windows-msvc"
+download-file = "topiary-cli-{arch}-pc-windows-msvc.zip"
+checksum-file = "topiary-cli-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/tweag/topiary/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/tweag/topiary/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i686"
