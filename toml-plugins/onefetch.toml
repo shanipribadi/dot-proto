@@ -1,0 +1,23 @@
+name = "onefetch"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/o2sh/onefetch"
+
+[platform.linux]
+archive-prefix = "onefetch-linux"
+download-file = "onefetch-linux.tar.gz"
+
+[platform.macos]
+archive-prefix = "onefetch-mac"
+download-file = "onefetch-mac.tar.gz"
+
+[platform.windows]
+archive-prefix = "onefetch-windows"
+download-file = "onefetch-windows.tar.gz"
+
+[install]
+download-url = "https://github.com/o2sh/onefetch/releases/download/{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
