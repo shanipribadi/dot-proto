@@ -1,0 +1,19 @@
+name = "servo"
+type = "cli"
+
+[resolve]
+versions = []
+
+[platform.linux]
+archive-prefix = "servo"
+download-file = "linux/servo-latest.tar.gz"
+
+[platform.windows]
+archive-prefix = "servo"
+download-file = "windows-msvc/servo-latest.zip"
+
+[install]
+download-url-canary = "https://download.servo.org/nightly/{download_file}"
+
+[install.arch]
+x86 = "i686"

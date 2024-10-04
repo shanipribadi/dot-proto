@@ -1,0 +1,27 @@
+name = "binsider"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/orhun/binsider"
+
+[platform.linux]
+archive-prefix = "binsider-{version}"
+download-file = "binsider-{version}-{arch}-unknown-linux-{libc}.tar.gz"
+checksum-file = "binsider-{version}-{arch}-unknown-linux-{libc}.tar.gz.sha512"
+
+[platform.macos]
+archive-prefix = "binsider-{version}"
+download-file = "binsider-{version}-{arch}-apple-darwin.tar.gz"
+checksum-file = "binsider-{version}-{arch}-apple-darwin.tar.gz.sha512"
+
+[platform.windows]
+archive-prefix = "binsider-{version}"
+download-file = "binsider-{version}-{arch}-pc-windows-msvc.zip"
+checksum-file = "binsider-{version}-{arch}-pc-windows-msvc.zip.sha512"
+
+[install]
+download-url = "https://github.com/orhun/binsider/releases/download/v{version}/{download_file}"
+# checksum-url = "https://github.com/orhun/binsider/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i686"

@@ -1,3 +1,8 @@
+{%- if versioned_file -%}
+{%- set filename = name ~ "-{version}-{arch}" -%}
+{%- else -%}
+{%- set filename = name ~ "-{arch}" -%}
+{%- endif -%}
 name = "{{name}}"
 type = "cli"
 
@@ -5,19 +10,19 @@ type = "cli"
 git-url = "https://github.com/{{repo}}"
 
 [platform.linux]
-archive-prefix = "{{name}}-{arch}-unknown-linux-{libc}"
-download-file = "{{name}}-{arch}-unknown-linux-{libc}.tar.gz"
-checksum-file = "{{name}}-{arch}-unknown-linux-{libc}.tar.gz.sha256"
+archive-prefix = "{{filename}}-unknown-linux-{libc}"
+download-file = "{{filename}}-unknown-linux-{libc}.tar.gz"
+checksum-file = "{{filename}}-unknown-linux-{libc}.tar.gz.sha256"
 
 [platform.macos]
-archive-prefix = "{{name}}-{arch}-apple-darwin"
-download-file = "{{name}}-{arch}-apple-darwin.tar.gz"
-checksum-file = "{{name}}-{arch}-apple-darwin.tar.gz.sha256"
+archive-prefix = "{{filename}}-apple-darwin"
+download-file = "{{filename}}-apple-darwin.tar.gz"
+checksum-file = "{{filename}}-apple-darwin.tar.gz.sha256"
 
 [platform.windows]
-archive-prefix = "{{name}}-{arch}-pc-windows-msvc"
-download-file = "{{name}}-{arch}-pc-windows-msvc.zip"
-checksum-file = "{{name}}-{arch}-pc-windows-msvc.zip.sha256"
+archive-prefix = "{{filename}}-pc-windows-msvc"
+download-file = "{{filename}}-pc-windows-msvc.zip"
+checksum-file = "{{filename}}-pc-windows-msvc.zip.sha256"
 
 [install]
 {% if v_tagged_release -%}
