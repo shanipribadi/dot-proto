@@ -1,0 +1,14 @@
+name = "nickel"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/tweag/nickel"
+
+[platform.linux]
+download-file = "nickel-{arch}-linux"
+
+[install]
+download-url = "https://github.com/tweag/nickel/releases/download/{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
