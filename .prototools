@@ -39,6 +39,7 @@ usql = "0.19.3"
 uv = "0.4.20"
 vendir = "0.42.0"
 yarn = "4.5.0"
+zig = "0.13.0"
 
 [tools.node]
 bundled-npm = true
@@ -93,6 +94,7 @@ usql = "file://toml-plugins/usql.toml"
 uv = "https://raw.githubusercontent.com/Phault/proto-toml-plugins/main/uv/plugin.toml"
 vendir = "file://toml-plugins/vendir.toml"
 xh = "file://toml-plugins/xh.toml"
+zig = "file://toml-plugins/zig.toml"
 
 [settings]
 auto-install = false
