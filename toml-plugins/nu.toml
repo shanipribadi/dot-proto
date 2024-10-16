@@ -1,0 +1,26 @@
+name = "nu"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/nushell/nushell"
+
+[platform.linux]
+archive-prefix = "nu-{version}-{arch}-unknown-linux-{libc}"
+download-file = "nu-{version}-{arch}-unknown-linux-{libc}.tar.gz"
+checksum-file = "nu-{version}-{arch}-unknown-linux-{libc}.tar.gz.sha256"
+
+[platform.macos]
+archive-prefix = "nu-{version}-{arch}-apple-darwin"
+download-file = "nu-{version}-{arch}-apple-darwin.tar.gz"
+checksum-file = "nu-{version}-{arch}-apple-darwin.tar.gz.sha256"
+
+[platform.windows]
+archive-prefix = "nu-{version}-{arch}-pc-windows-msvc"
+download-file = "nu-{version}-{arch}-pc-windows-msvc.zip"
+checksum-file = "nu-{version}-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/nushell/nushell/releases/download/{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
