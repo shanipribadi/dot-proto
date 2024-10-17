@@ -1,0 +1,23 @@
+name = "broot"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/Canop/broot"
+
+[platform.linux]
+# archive-prefix = "broot_{version}"
+# download-file = "broot_{version}.zip"
+download-file = "{arch}-linux/broot"
+
+[platform.macos]
+# archive-prefix = "broot_{version}"
+# download-file = "broot_{version}.zip"
+
+[platform.windows]
+# archive-prefix = "broot_{version}"
+# download-file = "broot_{version}.zip"
+download-file = "{arch}-pc-windows-gnu/broot.exe"
+
+[install]
+# download-url = "https://github.com/Canop/broot/releases/download/v{version}/{download_file}"
+download-url-canary = "https://dystroy.org/broot/download/{download_file}"
