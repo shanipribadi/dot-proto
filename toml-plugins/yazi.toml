@@ -1,0 +1,26 @@
+name = "yazi"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/sxyazi/yazi"
+
+[platform.linux]
+archive-prefix = "yazi-{arch}-unknown-linux-{libc}"
+download-file = "yazi-{arch}-unknown-linux-{libc}.zip"
+checksum-file = "yazi-{arch}-unknown-linux-{libc}.zip.sha256"
+
+[platform.macos]
+archive-prefix = "yazi-{arch}-apple-darwin"
+download-file = "yazi-{arch}-apple-darwin.zip"
+checksum-file = "yazi-{arch}-apple-darwin.zip.sha256"
+
+[platform.windows]
+archive-prefix = "yazi-{arch}-pc-windows-msvc"
+download-file = "yazi-{arch}-pc-windows-msvc.zip"
+checksum-file = "yazi-{arch}-pc-windows-msvc.zip.sha256"
+
+[install]
+download-url = "https://github.com/sxyazi/yazi/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86 = "i686"
