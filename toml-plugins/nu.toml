@@ -24,3 +24,14 @@ download-url = "https://github.com/nushell/nushell/releases/download/{version}/{
 
 [install.arch]
 x86 = "i686"
+
+[install.secondary.nu_plugin_formats]
+exe-path = "nu_plugin_formats"
+[install.secondary.nu_plugin_gstat]
+exe-path = "nu_plugin_gstat"
+[install.secondary.nu_plugin_inc]
+exe-path = "nu_plugin_inc"
+[install.secondary.nu_plugin_polars]
+exe-path = "nu_plugin_polars"
+[install.secondary.nu_plugin_query]
+exe-path = "nu_plugin_query"
