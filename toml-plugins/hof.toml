@@ -1,0 +1,29 @@
+name = "hof"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/hofstadter-io/hof"
+
+[platform.linux]
+archive_prefix = "hof_v{version}_linux_{arch}"
+download-file = "hof_v{version}_linux_{arch}"
+checksum-file = "hof_v{version}_checksums.txt"
+
+[platform.macos]
+archive_prefix = "hof_v{version}_darwin_{arch}"
+download-file = "hof_v{version}_darwin_{arch}"
+checksum-file = "hof_v{version}_checksums.txt"
+
+[platform.windows]
+archive_prefix = "hof_v{version}_windows_{arch}"
+download-file = "hof_v{version}_windows_{arch}.exe"
+checksum-file = "hof_v{version}_checksums.txt"
+
+[install]
+download-url = "https://github.com/hofstadter-io/hof/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/hofstadter-io/hof/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i686"
+x86_64 = "amd64"
+aarch64 = "arm64"
