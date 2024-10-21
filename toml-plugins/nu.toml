@@ -27,11 +27,16 @@ x86 = "i686"
 
 [install.secondary.nu_plugin_formats]
 exe-path = "nu_plugin_formats"
+no-bin = true
 [install.secondary.nu_plugin_gstat]
 exe-path = "nu_plugin_gstat"
+no-bin = true
 [install.secondary.nu_plugin_inc]
 exe-path = "nu_plugin_inc"
+no-bin = true
 [install.secondary.nu_plugin_polars]
 exe-path = "nu_plugin_polars"
+no-bin = true
 [install.secondary.nu_plugin_query]
 exe-path = "nu_plugin_query"
+no-bin = true
