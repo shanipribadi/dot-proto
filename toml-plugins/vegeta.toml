@@ -1,0 +1,29 @@
+name = "vegeta"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/tsenart/vegeta"
+
+[platform.linux]
+archive_prefix = "vegeta_{version}_linux_{arch}"
+download-file = "vegeta_{version}_linux_{arch}.tar.gz"
+checksum-file = "vegeta_{version}_checksums.txt"
+
+[platform.macos]
+archive_prefix = "vegeta_{version}_darwin_{arch}"
+download-file = "vegeta_{version}_darwin_{arch}.tar.gz"
+checksum-file = "vegeta_{version}_checksums.txt"
+
+[platform.windows]
+archive_prefix = "vegeta_{version}_windows_{arch}"
+download-file = "vegeta_{version}_windows_{arch}.tar.gz"
+checksum-file = "vegeta_{version}_checksums.txt"
+
+[install]
+download-url = "https://github.com/tsenart/vegeta/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/tsenart/vegeta/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "386"
+x86_64 = "amd64"
+aarch64 = "arm64"
