@@ -1,0 +1,28 @@
+name = "grpcurl"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/fullstorydev/grpcurl"
+
+[platform.linux]
+archive_prefix = "grpcurl_{version}_linux_{arch}"
+download-file = "grpcurl_{version}_linux_{arch}.tar.gz"
+checksum-file = "grpcurl_{version}_checksums.txt"
+
+[platform.macos]
+archive_prefix = "grpcurl_{version}_osx_{arch}"
+download-file = "grpcurl_{version}_osx_{arch}.tar.gz"
+checksum-file = "grpcurl_{version}_checksums.txt"
+
+[platform.windows]
+archive_prefix = "grpcurl_{version}_windows_{arch}"
+download-file = "grpcurl_{version}_windows_{arch}.zip"
+checksum-file = "grpcurl_{version}_checksums.txt"
+
+[install]
+download-url = "https://github.com/fullstorydev/grpcurl/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/fullstorydev/grpcurl/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "x86_32"
+aarch64 = "arm64"
