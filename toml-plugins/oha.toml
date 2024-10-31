@@ -1,0 +1,21 @@
+name = "oha"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/hatoo/oha"
+
+[platform.linux]
+download-file = "oha-linux-{arch}"
+
+[platform.macos]
+download-file = "oha-macos-{arch}"
+
+[platform.windows]
+download-file = "oha-windows-{arch}.exe"
+
+[install]
+download-url = "https://github.com/hatoo/oha/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "amd64"
+aarch64 = "arm64"
