@@ -1,0 +1,28 @@
+name = "ghz"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/bojand/ghz"
+
+[platform.linux]
+archive-prefix = "ghz-linux-{arch}"
+download-file = "ghz-linux-{arch}.tar.gz"
+checksum-file = "ghz-linux-{arch}.tar.gz.sha256"
+
+[platform.macos]
+archive-prefix = "ghz-darwin-{arch}"
+download-file = "ghz-darwin-{arch}.tar.gz"
+checksum-file = "ghz-darwin-{arch}.tar.gz.sha256"
+
+[platform.windows]
+archive-prefix = "ghz-windows-{arch}"
+download-file = "ghz-windows-{arch}.zip"
+checksum-file = "ghz-windows-{arch}.zip.sha256"
+
+[install]
+download-url = "https://github.com/bojand/ghz/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/bojand/ghz/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+x86 = "i686"
+aarch64 = "arm64"
