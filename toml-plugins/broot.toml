@@ -19,5 +19,5 @@ download-file = "{arch}-linux/broot"
 download-file = "{arch}-pc-windows-gnu/broot.exe"
 
 [install]
-# download-url = "https://github.com/Canop/broot/releases/download/v{version}/{download_file}"
+download-url = "https://github.com/Canop/broot/releases/download/v{version}/{download_file}"
 download-url-canary = "https://dystroy.org/broot/download/{download_file}"

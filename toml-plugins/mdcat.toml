@@ -27,4 +27,4 @@ download-url = "https://github.com/swsnr/mdcat/releases/download/mdcat-{version}
 x86 = "i686"
 
 [install.libc]
-gnu = "musl"
+# gnu = "musl"

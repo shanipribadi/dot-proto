@@ -5,13 +5,13 @@ type = "cli"
 git-url = "https://github.com/carapace-sh/carapace-bin"
 
 [platform.linux]
-download-file = "carapace-bin_linux_{arch}.tar.gz"
+download-file = "carapace-bin_{version}_linux_{arch}.tar.gz"
 
 [platform.macos]
-download-file = "carapace-bin-_darwin_{arch}.tar.gz"
+download-file = "carapace-bin_{version}_darwin_{arch}.tar.gz"
 
 [platform.windows]
-download-file = "carapace-bin_windows_{arch}.zip"
+download-file = "carapace-bin_{version}_windows_{arch}.zip"
 
 [install]
 download-url = "https://github.com/carapace-sh/carapace-bin/releases/download/v{version}/{download_file}"

@@ -20,8 +20,8 @@ download-file = "cue_v{version}_windows_{arch}.tar.gz"
 download-url = "https://github.com/cue-lang/cue/releases/download/v{version}/{download_file}"
 checksum-url = "https://github.com/cue-lang/cue/releases/download/v{version}/checksums.txt"
 
-[install.secondary.cuepls]
-exe-path = "cuepls"
+# [install.secondary.cuepls]
+# exe-path = "cuepls"
 
 [install.arch]
 x86 = "i686"

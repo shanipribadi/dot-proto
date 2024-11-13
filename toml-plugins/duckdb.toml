@@ -1,0 +1,23 @@
+name = "duckdb"
+type = "cli"
+
+[resolve]
+git-url = "https://github.com/duckdb/duckdb"
+
+[platform.linux]
+archive-prefix = "duckdb_cli-linux-{arch}"
+download-file = "duckdb_cli-linux-{arch}.zip"
+
+[platform.macos]
+archive-prefix = "duckdb_cli-osx-universal"
+download-file = "duckdb_cli-osx-universal.zip"
+
+[platform.windows]
+archive-prefix = "duckdb_cli-windows-{arch}"
+download-file = "duckdb_cli-windows-{arch}.zip"
+
+[install]
+download-url = "https://github.com/duckdb/duckdb/releases/download/v{version}/{download_file}"
+
+[install.arch]
+x86_64 = "amd64"
